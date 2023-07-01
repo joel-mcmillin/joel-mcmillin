@@ -10,7 +10,6 @@
 #### 👯 I’m looking to collaborate on ... Data Science projects!
 #### 🤔 I’m looking for help with ... Expanding my skillset and network!
 #### 💬 Ask me about ... Anything!!
-### 📫 How to reach me: joelmcmillin@gmail.com
-### 😄 Pronouns: He/Him
-- ⚡ Fun fact: ...
+
+
 
