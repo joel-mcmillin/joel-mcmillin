@@ -2,7 +2,7 @@
 
 This project involved taking 7.7 million rows of US automobile accident data, preparing it and then using a decision tree model to determine which variables could help in predicting accident severity on a scale of 1-4, with level 1 being least severe and level 4 being the most severe. I used resampling due to the unbalanced dataset, with the overwhelming majority of observations being of level 2 severity, in order to avoid overfitting the model. I also used feature selection to find the top 5 features to refine the model before evaluating it for accuracy.
 
-## **Data Source**
+## **Data Sources**
 
 The data used comes from:
 
