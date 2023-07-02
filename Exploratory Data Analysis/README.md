@@ -10,7 +10,7 @@ For this, I mostly relied on thinkplot and thinkstats2. I used histographs and s
 
 Notable findings were that there appears to be an increase in AirBnb use/spending/reviews toward the end of 2021. This is noticeable because the increase shows more use/spending/reviews after the pandemic than at any point before the pandemic. This prompts the question of Why that may be. Is this consumers wanted to travel as soon as restrictions started to lift? Were prices lowered in hopes of greater demand? Was the reverse true? These questions weren't investigated as part of this EDA project, but would make a great follow-up, especially now that the AirBnb market is cooling.
 
-## **Data Source**
+## **Data Sources**
 
 The data and methods used comes from:
 
