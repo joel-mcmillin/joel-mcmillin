@@ -14,3 +14,17 @@
 
 
 ![github stats](https://github-readme-stats.vercel.app/api?username=joel-mcmillin&show_icons=true&theme=radical)
+
+
+## Repository Contents
+
+* Airline Data Visualization Project - Tableau
+
+* Decision Tree
+
+* Exploratory Data Analysis
+
+* Python Joke App
+
+* Python Weather App
+
