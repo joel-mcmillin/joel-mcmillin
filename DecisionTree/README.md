@@ -6,7 +6,7 @@ This project involved taking 7.7 million rows of US automobile accident data, pr
 
 The data used comes from:
 
-https://smoosavi.org/datasets/us_accidents
+* Moosavi, Sobhan. https://smoosavi.org/datasets/us_accidents
 
 * Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, and Rajiv Ramnath. “A Countrywide Traffic Accident Dataset.”, arXiv preprint arXiv:1906.05409 (2019).
 
