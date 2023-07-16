@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
 
-
-# Importing necessary libraries
+# Importing libraries
 import tensorflow as tf
 import numpy as np
 from tensorflow import keras
@@ -15,32 +13,25 @@ from tensorflow.keras.preprocessing import image
 import matplotlib.pyplot as plt
 
 
-# In[2]:
-
-
 # Rescaling training and test data and setting the training and test data
 train = ImageDataGenerator(rescale=1/255)
 test = ImageDataGenerator(rescale=1/255)
 
-train_data = train.flow_from_directory('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/Training and Validation/',
+train_data = train.flow_from_directory('FOLDER PATH - TRAINING DATA',
                                       target_size=(150, 150),
                                       batch_size=32,
                                       class_mode='binary')
 
-test_data = test.flow_from_directory('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/Testing/',
+test_data = test.flow_from_directory('FOLDER PATH - TEST DATA',
                                       target_size=(150, 150),
                                       batch_size=32,
                                       class_mode='binary')
 
-
-# In[3]:
 
 
 # Confirming the class types are indexed correctly
 test_data.class_indices
 
-
-# In[4]:
 
 
 # Building the model using CNN
@@ -58,14 +49,10 @@ model.add(keras.layers.Dense(512, activation='relu'))
 model.add(keras.layers.Dense(1, activation='sigmoid'))
 
 
-# In[5]:
-
 
 # Compiling the model and setting accuracy metrics
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-
-# In[6]:
 
 
 # Model fit with 5 epochs
@@ -73,8 +60,6 @@ model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy']
 
 #96.24% accuracy w/ 5 epochs
 
-
-# In[6]:
 
 
 # Model fit with 10 epochs
@@ -92,27 +77,19 @@ Epoch 8/10
 '''
 
 
-# In[7]:
-
 
 # Making predictions using our model
 pred = model.predict(test_data)
 pred = np.round(pred)
 
 
-# In[8]:
-
 
 pred
 
 
-# In[9]:
-
 
 print(len(pred))
 
-
-# In[22]:
 
 
 # Plotting the loss and validation loss
@@ -126,7 +103,6 @@ plt.plot(r.history['val_loss'], label='Validation Loss')
 plt.legend()
 
 
-# In[11]:
 
 
 # Defining a function for predicting new images
@@ -143,49 +119,17 @@ def predictImage(filename):
         plt.xlabel("Fire Detected", fontsize=30)
 
 
-# In[12]:
 
 
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/Testing/nofire/abc337.jpg')
+predictImage('IMAGE_FILE_PATH')
 
 
-# In[13]:
 
 
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/Download.jpg')
 
 
-# In[14]:
 
 
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl2.jpg')
-
-
-# In[20]:
-
-
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl3.jpg')
-
-
-# In[18]:
-
-
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl4.jpg')
-
-
-# In[19]:
-
-
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl5.jpg')
-
-
-# In[21]:
-
-
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl6.jpg')
-
-
-# In[ ]:
 
 
 
