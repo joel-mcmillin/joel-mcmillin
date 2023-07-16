@@ -11,9 +11,8 @@
 #### 🤔 I’m looking for help with ... Expanding my skillset and network!
 #### 💬 Ask me about ... Anything!!
 
-
-
-![github stats](https://github-readme-stats.vercel.app/api?username=joel-mcmillin&show_icons=true&theme=radical)
+---
+---
 
 
 ## Repository Contents
