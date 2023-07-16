@@ -1,6 +1,6 @@
 ## **Exploratory Data Analysis - AirBnb Data (2016-2021)**
 
-This was an early Data Science project from DSC530, and it involves Exploratory Data Analysis (EDA).
+This was an early Data Science project from a class, and it involves Exploratory Data Analysis (EDA).
 
 I used AirBnb data from NYC that included pricing, rental property type, number of reviews, reviews per month, and date of last review to look for any trends in the data. This was of interest to me because of the timeframe for the data, which has early AirBnb data up through the pandemic that started in early 2020. The data runs through late 2021, when vaccine availability led to increased travel and use of AirBnb properties.
 
