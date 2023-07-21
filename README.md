@@ -27,3 +27,5 @@
 
 * Python Weather App
 
+* Regression and Lasso Models 
+
