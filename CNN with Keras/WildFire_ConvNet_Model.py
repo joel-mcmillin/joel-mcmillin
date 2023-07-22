@@ -16,12 +16,12 @@ import matplotlib.pyplot as plt
 train = ImageDataGenerator(rescale=1/255)
 test = ImageDataGenerator(rescale=1/255)
 
-train_data = train.flow_from_directory('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/Training and Validation/',
+train_data = train.flow_from_directory('/forest_fire/Training and Validation/',
                                       target_size=(150, 150),
                                       batch_size=32,
                                       class_mode='binary')
 
-test_data = test.flow_from_directory('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/Testing/',
+test_data = test.flow_from_directory('/forest_fire/Testing/',
                                       target_size=(150, 150),
                                       batch_size=32,
                                       class_mode='binary')
@@ -128,32 +128,32 @@ def predictImage(filename):
 
 
 # 1
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/Testing/nofire/abc337.jpg')
+predictImage('Testing/nofire/abc337.jpg')
 
 
 
 # 2
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/Download.jpg')
+predictImage('forest_fire/Download.jpg')
 
 
 
 # 3
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl2.jpg')
+predictImage('forest_fire/dl2.jpg')
 
 
 
 # 4
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl3.jpg')
+predictImage('forest_fire/dl3.jpg')
 
 
 
 # 5
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl4.jpg')
+predictImage('forest_fire/dl4.jpg')
 
 
 
 # 6
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl5.jpg')
+predictImage('forest_fire/dl5.jpg')
 
 
 
@@ -162,4 +162,4 @@ predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2
 # across multiple instantiations of this model. This is an area of opportunity for modeling accuracy as 
 # part of the goal of this project is early fire detection
 
-predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl6.jpg')
+predictImage('forest_fire/dl6.jpg')
