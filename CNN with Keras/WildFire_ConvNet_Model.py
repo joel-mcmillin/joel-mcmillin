@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 # Importing libraries
 import tensorflow as tf
 import numpy as np
@@ -13,9 +10,6 @@ import cv2
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.preprocessing import image
 import matplotlib.pyplot as plt
-
-
-# In[2]:
 
 
 # Rescaling training and test data and setting the training and test data
@@ -33,14 +27,10 @@ test_data = test.flow_from_directory('C:/Users/joelm/OneDrive/Data Visualization
                                       class_mode='binary')
 
 
-# In[3]:
-
 
 # Confirming the class types are indexed correctly
 test_data.class_indices
 
-
-# In[4]:
 
 
 # Building the model using CNN
@@ -58,14 +48,10 @@ model.add(keras.layers.Dense(512, activation='relu'))
 model.add(keras.layers.Dense(1, activation='sigmoid'))
 
 
-# In[5]:
-
 
 # Compiling the model and setting accuracy metrics
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-
-# In[6]:
 
 
 # Visualizing the model with keras plot_model
@@ -73,28 +59,20 @@ from keras.utils.vis_utils import plot_model
 plot_model(model, to_file='model_plot.png', show_shapes=True, show_layer_names=True)
 
 
-# In[17]:
-
 
 # Visualizing the CNN layers, with legend, using visualkeras
 import visualkeras
-
 visualkeras.layered_view(model, legend=True) 
 from PIL import ImageFont
 font = ImageFont.truetype("arial.ttf", 20)
 visualkeras.layered_view(model, legend=True, font=font)
 
 
-# In[6]:
-
 
 # Model fit with 5 epochs
 #r = model.fit(train_data, epochs=5, validation_data=test_data)
-
 #96.24% accuracy w/ 5 epochs
 
-
-# In[18]:
 
 
 # Model fit with 10 epochs
@@ -112,27 +90,14 @@ Epoch 9/10
 '''
 
 
-# In[19]:
-
-
 # Making predictions using our model
 pred = model.predict(test_data)
 pred = np.round(pred)
 
-
-# In[20]:
-
-
 pred
-
-
-# In[23]:
-
 
 print(len(pred))
 
-
-# In[22]:
 
 
 # Plotting the loss and validation loss
@@ -145,8 +110,6 @@ plt.plot(r.history['loss'], label='Loss')
 plt.plot(r.history['val_loss'], label='Validation Loss')
 plt.legend()
 
-
-# In[24]:
 
 
 # Defining a function for predicting new images
@@ -163,49 +126,35 @@ def predictImage(filename):
         plt.xlabel("Fire Detected", fontsize=25)
 
 
-# In[25]:
-
 
 # 1
 predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/Testing/nofire/abc337.jpg')
 
-
-# In[26]:
 
 
 # 2
 predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/Download.jpg')
 
 
-# In[27]:
-
 
 # 3
 predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl2.jpg')
 
-
-# In[28]:
 
 
 # 4
 predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl3.jpg')
 
 
-# In[29]:
-
 
 # 5
 predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl4.jpg')
 
 
-# In[30]:
-
 
 # 6
 predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl5.jpg')
 
-
-# In[32]:
 
 
 # 8
@@ -214,10 +163,3 @@ predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2
 # part of the goal of this project is early fire detection
 
 predictImage('C:/Users/joelm/OneDrive/Data Visualization/DSC680/DSC680_Project_2/forest_fire/dl6.jpg')
-
-
-# In[ ]:
-
-
-
-
