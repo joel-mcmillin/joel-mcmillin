@@ -19,6 +19,8 @@
 
 * Airline Data Visualization Project - Tableau
 
+* ConvNet with Keras
+
 * Decision Tree
 
 * Exploratory Data Analysis
